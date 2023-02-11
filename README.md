@@ -25,7 +25,7 @@ node server.js
 ##### Step 7: Access you nodejs application UI from browser
 http://localhost:3000
 
-##### Docker compose:
+##### Docker compose: Running multiple Docker Contaniners
 ##### Create docker compose file: 
 version: '3'
 services:
