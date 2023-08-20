@@ -121,7 +121,7 @@ Create a docker-compose.yml file with the following contents:
 ##### Step 4: Tag the Image for the ECR Repository
 - Tag your built image with the ECR repository URI and the desired tag:
 
-     docker tag my-app:1.0 <account_id>.dkr.ecr.<region>.amazonaws.com/my-app:1.0
+        docker tag my-app:1.0 <account_id>.dkr.ecr.<region>.amazonaws.com/my-app:1.0
   
 - Replace <account_id> with your AWS account ID and <region> with the AWS region.
 
@@ -168,7 +168,7 @@ Create a docker-compose.yml file with the following contents:
 ##### Step 3: Start Docker Containers on Remote Server
 - Initiate the Docker containers on the remote server using the docker-compose command:
 
-     docker-compose -f mongo.yaml up let mongoUrlLocal "mongodb://admin:password@mongodb:27017";
+         docker-compose -f mongo.yaml up let mongoUrlLocal "mongodb://admin:password@mongodb:27017";
   
 ##### Step 3 Start docker containers with docker-compose:
 
@@ -184,7 +184,7 @@ Create a docker-compose.yml file with the following contents:
 
 ##### Step 2: Update docker-compose.yaml File
 
-In your docker-compose.yaml file, integrate the containers while keeping data persistence in mind:
+In the docker-compose.yaml file, integrate the containers while keeping data persistence in mind:
 
      version: '3'
      services:
