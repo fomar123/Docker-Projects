@@ -136,28 +136,28 @@ Create a docker-compose.yml file with the following contents:
 - Create a mongo.yaml file and configure the services as follows:
 
 
-     version: '3'
-     services:
-       my-app:
-        image: 931407886896.dkr.ecr.us-east-1.amazonaws.com/my-app:1.0
-        ports:
-          - 3000:3000
-       mongodb:
-         image: mongo
-         ports:
-           - 27017:27017
-       environment:
-           - MONGO_INITDB_ROOT_USERNAME=admin
-           - MONGO_INITDB_ROOT_PASSWORD=password
-       mongo-express:
-         image: mongo-express
-         restart: always
-         ports:
-           - 8080:8081
+       version: '3'
+       services:
+         my-app:
+          image: 931407886896.dkr.ecr.us-east-1.amazonaws.com/my-app:1.0
+          ports:
+            - 3000:3000
+         mongodb:
+           image: mongo
+           ports:
+             - 27017:27017
          environment:
-           - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
-           - ME_CONFIG_MONGODB_ADMINPASSWORD=password
-           - ME_CONFIG_MONGODB_SERVER=mongodb
+             - MONGO_INITDB_ROOT_USERNAME=admin
+             - MONGO_INITDB_ROOT_PASSWORD=password
+         mongo-express:
+           image: mongo-express
+           restart: always
+           ports:
+             - 8080:8081
+           environment:
+             - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
+             - ME_CONFIG_MONGODB_ADMINPASSWORD=password
+             - ME_CONFIG_MONGODB_SERVER=mongodb
   
 ##### Step 2: Update MongoDB Server URL in Node Code
 - Adjust the MongoDB server URL in your Node.js application code. Change it from localhost to the MongoDB service name (mongodb) in the mongoUrlLocal variable:
